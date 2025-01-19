@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Task Manager</h1>
+        </div>
+        <p>Organize your tasks and stay productive!</p>
+    </header>
+
+    <main>
+        <div class="task-form">
+            <input type="text" id="task-title" placeholder="Enter Task Title" />
+            <textarea id="task-desc" placeholder="Enter Task Description"></textarea>
+            <input type="date" id="task-date" />
+            <input type="date" id="task-reminder" />
+            <select id="task-priority">
+                <option value="Low">Low Priority</option>
+                <option value="Medium">Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+            <button onclick="addTask()" class="add-task-btn">Add Task</button>
+        </div>
+
+        <h2>Task List</h2>
+        <div id="task-list"></div>
+
+        <!-- Scroll to top button -->
+        <button id="scroll-btn" onclick="scrollToTop()">↑</button>
+    </main>
+
+    <footer>
+        <p>Task Manager &copy; 2025</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
